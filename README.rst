@@ -45,7 +45,6 @@ Inicialización del proyecto
 Para la inicialización del proyecto Buildout, ejecute el siguiente comando: ::
 
   pip install -r requirements.txt
-  buildout 
 
 
 Construcción del proyecto
@@ -53,7 +52,7 @@ Construcción del proyecto
 
 Para la construcción del proyecto Buildout para obtener Zope 4.0, ejecute el siguiente comando: ::
 
-  ./bin/buildout
+  buildout
 
 
 Crear instancia Zope 4
