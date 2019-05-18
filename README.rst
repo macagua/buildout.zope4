@@ -106,7 +106,7 @@ entonces abra un navegador con esa dirección y le presentara la siguiente panta
 .. image:: https://github.com/macagua/buildout.zope4/raw/master/zope4_index_html.png
    :target: http://localhost:8080
 
-Para acceder a la Zope Managment Interface - ZMI abra en su navegador la dirección http://localhost:8080/manage la cual le 
+Para acceder a la Zope Management Interface - ZMI abra en su navegador la dirección http://localhost:8080/manage la cual le 
 solicitara el nombre de usuario **admin** y contraseña **admin** y le presentara la siguiente pantalla: 
 
 .. image:: https://github.com/macagua/buildout.zope4/raw/master/zope4_manage.png
