@@ -13,6 +13,9 @@ Características
 
 - `Zope 4.0 <https://pypi.org/project/Zope/4.0/>`_, la ultima versión soporta Zope 4.
 
+- `Zope 4.0b10 <https://pypi.org/project/Zope/4.0b10/>`_, la ultima versión de Zope 4, la cual soporta 
+  el proyecto Plone en su versión 5.2.
+
 - `Python 3.5.x <https://www.python.org/downloads/release/python-356/>`_.
 
 
@@ -56,6 +59,10 @@ Construcción del proyecto
 Para la construcción del proyecto Buildout para obtener Zope 4.0, ejecute el siguiente comando: ::
 
   buildout
+
+Para la construcción del proyecto Buildout para obtener Zope 4.0b10, ejecute el siguiente comando: ::
+
+  ./bin/buildout -c 4.0b10.cfg
 
 
 Crear instancia Zope 4
