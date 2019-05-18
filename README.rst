@@ -4,6 +4,9 @@ buildout.zope4
 
 Configuración de buildout para el servidor de aplicaciones Zope 4 con Python 3.5.
 
+.. image:: https://travis-ci.org/macagua/buildout.zope4.svg?branch=master
+   :target: https://travis-ci.org/macagua/buildout.zope4
+
 
 Características
 ===============
