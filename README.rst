@@ -13,8 +13,8 @@ Características
 
 - `Zope 4.0 <https://pypi.org/project/Zope/4.0/>`_, la ultima versión soporta Zope 4.
 
-- `Zope 4.0b10 <https://pypi.org/project/Zope/4.0b10/>`_, la ultima versión de Zope 4, la cual soporta 
-  el proyecto Plone en su versión 5.2.
+- `Zope 4.0b10 <https://pypi.org/project/Zope/4.0b10/>`_, la ultima versión de Zope 4, 
+  la cual soporta el proyecto Plone en su versión 5.2.
 
 - `Python 3.5.x <https://www.python.org/downloads/release/python-356/>`_.
 
@@ -24,8 +24,9 @@ Requerimientos
 
 Estos son los requerimientos mínimos de instalación: ::
 
-  sudo apt-get update && sudo apt-get upgrade -y
-  sudo apt install git build-essential zlib1g-dev python3-dev python3-pip python3-virtualenv
+  sudo apt update && sudo apt upgrade -y
+  sudo apt install git build-essential zlib1g-dev python3-dev python3-pip \
+                       python3-virtualenv
 
 
 Descargar
@@ -39,7 +40,8 @@ Para la descargar del proyecto Buildout, ejecute el siguiente comando: ::
 Entorno virtual
 ===============
 
-Se requiere crear y activar un entorno virtual Python para proyecto Buildout, ejecute los siguientes comando: ::
+Se requiere crear y activar un entorno virtual Python para proyecto Buildout, ejecute los 
+siguientes comando: ::
 
   virtualenv --python=/usr/bin/python3 venv
   source ./venv/bin/activate
@@ -100,14 +102,16 @@ Para ejecutar la instancia ``zopeinstance`` del servidor Zope 4, ejecute el sigu
   Starting server in PID 8275.
   Serving on http://localhost:8080
 
-Como lo indica el ultimo mensaje de consola, el servidor Zope 4 puede ser consultado en la dirección http://localhost:8080 
-entonces abra un navegador con esa dirección y le presentara la siguiente pantalla:
+Como lo indica el ultimo mensaje de consola, el servidor Zope 4 puede ser consultado en la 
+dirección http://localhost:8080 entonces abra un navegador con esa dirección y le presentara la 
+siguiente pantalla:
 
 .. image:: https://github.com/macagua/buildout.zope4/raw/master/zope4_index_html.png
    :target: http://localhost:8080
 
-Para acceder a la Zope Management Interface - ZMI abra en su navegador la dirección http://localhost:8080/manage la cual le 
-solicitara el nombre de usuario **admin** y contraseña **admin** y le presentara la siguiente pantalla: 
+Para acceder a la Zope Management Interface - ZMI abra en su navegador favorito la dirección 
+http://localhost:8080/manage la cual le solicitara el nombre de usuario **admin** y contraseña 
+**admin** y le presentara la siguiente pantalla: 
 
 .. image:: https://github.com/macagua/buildout.zope4/raw/master/zope4_manage.png
    :target: http://localhost:8080/manage
@@ -146,19 +150,24 @@ Comandos disponibles
 
     ./bin/addzope2user <username> <password>
 
-  Para más información consulte la ayuda incluida en el script con el siguiente comando ``./bin/addzope2user -h``.
+  Para más información consulte la ayuda incluida en el script con el siguiente comando: ::
+
+    ./bin/addzope2user -h
 
 
 ./bin/mkwsgiinstance
 
-  Permite crear una instancia WSGI de Zope. agregar un nuevo usuario Zope, ejecutando el siguiente comando: ::
+  Permite crear una instancia WSGI de Zope. agregar un nuevo usuario Zope, ejecutando el 
+  siguiente comando: ::
 
     ./bin/mkwsgiinstance -d $PWD/zopeinstance -u admin:admin --python=$PWD/bin/zopepy
 
-  Cuando se ejecuta sin argumentos, este script solicitará la información necesaria para crear una instancia de 
-  inicio de Zope WSGI.
+  Cuando se ejecuta sin argumentos, este script solicitará la información necesaria para 
+  crear una instancia de inicio de Zope WSGI.
 
-  Para más información consulte la ayuda incluida en el script con el siguiente comando ``./bin/mkwsgiinstance -h``.
+  Para más información consulte la ayuda incluida en el script con el siguiente comando: ::
+
+    ./bin/mkwsgiinstance -h
 
 
 ./bin/mkzopeinstance
@@ -170,15 +179,18 @@ Comandos disponibles
 
   Uso: runwsgi config_uri [var=valor]
 
-  Es el script ejecutor del ZDaemon (servicio) Zope, para ejecutarlo ejecute el siguiente comando: ::
+  Es el script ejecutor del ZDaemon (servicio) Zope, para ejecutarlo ejecute el siguiente 
+  comando: ::
 
     ./bin/runwsgi $PWD/zopeinstance/etc/zope.ini -n zope --server-name=main
 
-  Este comando sirve a una aplicación web que utiliza un archivo de configuración del paquete ``PasteDeploy`` 
-  para el servidor y la aplicación. También puede incluir asignaciones de variables como ``'http_port=8080'`` y 
-  luego usar ``%(http_port)s`` en sus archivos de configuración.
+  Este comando sirve a una aplicación web que utiliza un archivo de configuración del paquete 
+  ``PasteDeploy`` para el servidor y la aplicación. También puede incluir asignaciones de 
+  variables como ``'http_port=8080'`` y luego usar ``%(http_port)s`` en sus archivos de configuración.
 
-  Para más información consulte la ayuda incluida en el script con el siguiente comando ``./bin/runwsgi -h``.
+  Para más información consulte la ayuda incluida en el script con el siguiente comando: ::
+
+    ./bin/runwsgi -h
 
 
 ./bin/zconsole
@@ -214,7 +226,9 @@ Comandos disponibles
 
     ./bin/zconsole run $PWD/zopeinstance/etc/zope.conf
 
-  Para más información consulte la ayuda incluida en el script con el siguiente comando ``./bin/zconsole -h``.
+  Para más información consulte la ayuda incluida en el script con el siguiente comando: ::
+
+    ./bin/zconsole -h
 
 
 ./bin/zpasswd
@@ -228,14 +242,16 @@ Comandos extras recetas buildout
 ./bin/instance
 
 
-  Es el script que lleva por nombre de la sección ``[instance]`` buildout que construye automáticamente Zope 4, 
-  eso quiere decir, controla la instancia Zope usando ZDaemon (Zope Daemon), como lo hace el script ``zopectl``. 
+  Es el script que lleva por nombre de la sección ``[instance]`` buildout que construye 
+  automáticamente Zope 4, eso quiere decir, controla la instancia Zope usando ZDaemon (Zope Daemon), 
+  como lo hace el script ``zopectl``. 
 
   Para instalarlo ejecute el siguiente comando: ::
 
     buildout install instance
 
-  Luego de la ejecución crean nuevos directorios y archivos como se presentan en la siguiente estructura: ::
+  Luego de la ejecución crean nuevos directorios y archivos como se presentan en la siguiente 
+  estructura: ::
 
     parts/instance/
     ├── bin/
@@ -294,7 +310,8 @@ Comandos extras recetas buildout
 
     ./bin/instance status
 
-  Para el script ``instance show`` en modo **mostrar variables de configuración del servicio**, ejecute el siguiente comando: ::
+  Para el script ``instance show`` en modo **mostrar variables de configuración del servicio**, ejecute 
+  el siguiente comando: ::
 
     ./bin/instance show
 
@@ -314,18 +331,22 @@ Comandos extras recetas buildout
 
     ./bin/instance restart
 
-  Para el script ``instance run`` en modo **ejecutar script con argumentos en el servicio**, ejecute el siguiente comando: ::
+  Para el script ``instance run`` en modo **ejecutar script con argumentos en el servicio**, ejecute 
+  el siguiente comando: ::
 
     ./bin/instance run <script> [args]
 
-  Para más información consulte la ayuda incluida en el script con el siguiente comando ``./bin/instance -h``.
+  Para más información consulte la ayuda incluida en el script con el siguiente comando: ::
+
+    ./bin/instance -h
+
   Adicionalmente consulte el articulo `Installing Zope with zc.buildout — Zope documentation 4.0 documentation <https://zope.readthedocs.io/en/latest/INSTALL.html#installing-zope-with-zc-buildout>`_.
 
 
 ./bin/zopepy
 
-  Es el script que acceder a una consola interactiva de Python al contexto de la instalación de Zope 4, para 
-  instalarlo ejecute el siguiente comando: ::
+  Es el script que acceder a una consola interactiva de Python al contexto de la instalación de Zope 4, 
+  para instalarlo ejecute el siguiente comando: ::
 
     buildout install zopepy
 
@@ -337,5 +358,6 @@ Comandos extras recetas buildout
     'Zope application package.'
     >>> exit()
 
-  Este script puede ser usado tanto por el comando ``mkwsgiinstance`` para crear una instancia nueva de Zope, como hacer 
-  introspección de Python al contexto de la instalación de Zope 4.
+  Este script puede ser usado tanto por el comando ``mkwsgiinstance`` para crear una instancia nueva de Zope, 
+  como hacer introspección de Python al contexto de la instalación de Zope 4.
+
