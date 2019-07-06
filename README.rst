@@ -146,13 +146,13 @@ Comandos disponibles
 
 ./bin/addzope2user
 
-  Permite agregar un nuevo usuario Zope, ejecutando el siguiente comando: ::
+    Permite agregar un nuevo usuario Zope, ejecutando el siguiente comando: ::
 
-    ./bin/addzope2user <username> <password>
+        ./bin/addzope2user <username> <password>
 
-  Para más información consulte la ayuda incluida en el script con el siguiente comando: ::
+    Para más información consulte la ayuda incluida en el script con el siguiente comando: ::
 
-    ./bin/addzope2user -h
+        ./bin/addzope2user -h
 
 
 ./bin/mkwsgiinstance
