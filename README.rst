@@ -43,6 +43,7 @@ Entorno virtual
 Se requiere crear y activar un entorno virtual Python para proyecto Buildout, ejecute los 
 siguientes comando: ::
 
+  cd buildout.zope4
   virtualenv --python=/usr/bin/python3 venv
   source ./venv/bin/activate
 
